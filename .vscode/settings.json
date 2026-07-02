@@ -1,0 +1,24 @@
+{
+    "python.analysis.extraPaths": [
+        "./path/to/compiled/modules"
+    ],
+    "chat.tools.terminal.autoApprove": {
+        "/^python3 -m py_compile ai_founders_intellia\\.py$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python3 ai_founders_intellia\\.py --workspace-root /workspaces/AVIA-founders-intellia --agent --agent-query \"Summarize recent reports briefly\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python -m unittest tests\\.test_agent -v && python -m unittest tests\\.test_tools -v && python -m unittest tests\\.test_memory_scheduler -v$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python -m unittest tests\\.test_memory_scheduler -v$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "git ls-tree": true
+    }
+}
